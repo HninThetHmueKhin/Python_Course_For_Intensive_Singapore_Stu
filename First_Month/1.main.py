@@ -23,3 +23,5 @@ print("The value of x is ",creditScore1,creditScore2)
 
 print("The value of creditScore1 is {1} and creditScore2 is {0}".format(creditScore1,creditScore2))
 #0 1 2
+
+
