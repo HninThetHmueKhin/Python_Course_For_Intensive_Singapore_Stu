@@ -1,16 +1,25 @@
-# This is a sample Python script.
+#Standard input and output
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#Python
+# a = "Python"#str
+b = 12 #int
+# c = 12.0 #float
+# d = False#bool
+# e = True#bool
+# print("Hello, World")
+# #print(values,sep,end,file,flush)#values ---> main , other ---> optional
+#
+# print("Hello", "Python",sep=",")
 
+#python print() with end Parameter
+print("Good night!",end="\t",flush=True)#Default False
+print("It is rainy day")#int(12.0)
+print("Amazon"+str(b)+"Shop")#Concatenated Strings
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+#Output formatting
+creditScore1 = 5
+creditScore2 = 6
+print("The value of x is ",creditScore1,creditScore2)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("The value of creditScore1 is {1} and creditScore2 is {0}".format(creditScore1,creditScore2))
+#0 1 2
