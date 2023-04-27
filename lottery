@@ -1,0 +1,56 @@
+import sys
+import random
+username = input("Enter your name: ").strip().upper()
+print("Welcome from Lottery Game,{}!!!".format(username))
+age = input("Enter your age: ").strip()
+if len(age) <= 2 :
+    if int(age)>=18:
+        user_amount = int(input("Please enter your amount: ").strip())
+        option = input("Press 1 to play game:Press 2 to quit:Press 3 to check retailer: ")
+        #
+        if len(option) == 1 :
+            while int(option) == 1:
+                play_amount = int(input("Please enter your play amount: "))
+                max_amount = 100000
+                min_amount = 10000
+                if user_amount < play_amount:
+                    print("Insufficient amount")
+                    sys.exit()
+                elif play_amount > max_amount:
+                    print("Your amount is too much")
+                elif play_amount < min_amount:
+                    print("Your amount is too low")
+                else:
+                    lottery_number = ""
+                    for i in range(1):
+                    # lottery_number = 99
+                        lottery_number += str(random.randint(0, 99))
+                    cust_choose_number = int(input("Please enter your guess number:\t"))
+                    if cust_choose_number == lottery_number:
+                        play_amount *= 2
+                        user_amount += play_amount
+                        print(f"You are the winner.Your play amount is {user_amount}and the wining number is {lottery_number}")
+                    elif cust_choose_number != lottery_number:
+                        user_amount -= play_amount
+                        print(f"You lose the lottery.Your play amount is {user_amount} and the wining number is {lottery_number}")
+                    else:
+                        pass
+            if int(option) == 3 :
+                retailer = ["YANGON", "BAGAN", "SG"]
+                chooseLocation = input("Please enter the retailer places you want to know:\t").upper()
+                for loc in retailer:
+                    if loc.__contains__(chooseLocation):
+                        print(f"Retailer location is {loc}")
+            else:
+                sys.exit()
+
+        else:
+            print("Please only type 1 or 2.")
+    else:
+        print("You are not legal to play this game!")
+else:
+    print("Please enter your real age!")
+
+# import random
+# random_no = random.randint(0,99)
+# print(random_no)
