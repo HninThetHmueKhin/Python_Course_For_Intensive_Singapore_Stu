@@ -1,0 +1,27 @@
+operator = input("Enter operator\t").strip()
+Totalresult = None
+error = 0
+ope = ["+","-","*","/","//","%","**"]
+for cal in ope:
+    if operator in ope :
+        Num1 = int(input("Enter Num1\t"))
+        Num2 = int(input("Enter Num 2\t"))
+        if operator == '*':
+            Totalresult = Num1 * Num2
+        elif operator == '+':
+            Totalresult = Num1 + Num2
+        elif operator == '-':
+            Totalresult = Num1 - Num2
+        elif operator == '/':
+            Totalresult = Num1 / Num2
+        elif operator == '//':
+            Totalresult = Num1 // Num2
+        elif operator == '**':
+            Totalresult = Num1 ** Num2
+        elif operator == '%':
+            Totalresult = Num1 % Num2
+        print(f"Two numbers of {operator} is {Totalresult}")
+    else :
+        error = 1
+if(error==1):
+    print("Please enter correct operators ")
