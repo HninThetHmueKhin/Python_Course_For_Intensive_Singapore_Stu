@@ -1,0 +1,61 @@
+class Account:
+    def __init__(self, name, balance=0):
+        self.name = name
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposit of {amount} successful. Your current balance is {self.balance}")
+
+    def withdraw(self, amount):
+        if amount > self.balance:
+            print("Insufficient balance")
+        else:
+            self.balance -= amount
+            print(f"Withdrawal of {amount} successful. Your current balance is {self.balance}")
+
+    def show_balance(self):
+        print(f"Your current balance is {self.balance}")
+
+    def transfer(self, recipient, amount):
+        if amount > self.balance:
+            print("Insufficient balance")
+        else:
+            self.balance -= amount
+            recipient.balance += amount
+            print(f"Transfer of {amount} to {recipient.name} successful. Your current balance is {self.balance}")
+
+def main():
+    print("Welcome to Mini Banking Program!")
+    name = input("Enter your name: ")
+    balance = float(input("Enter your starting balance: "))
+    account = Account(name, balance)
+    while True:
+        print("Select an option:")
+        print("1. Deposit")
+        print("2. Withdraw")
+        print("3. Show Balance")
+        print("4. Transfer")
+        print("5. Exit")
+        option = int(input())
+        if option == 1:
+            amount = float(input("Enter amount to deposit: "))
+            account.deposit(amount)
+        elif option == 2:
+            amount = float(input("Enter amount to withdraw: "))
+            account.withdraw(amount)
+        elif option == 3:
+            account.show_balance()
+        elif option == 4:
+            recipient_name = input("Enter recipient's name: ")
+            recipient = Account(recipient_name)
+            amount = float(input("Enter amount to transfer: "))
+            account.transfer(recipient, amount)
+        elif option == 5:
+            print("Thank you for using Mini Banking Program!")
+            break
+        else:
+            print("Invalid option")
+
+if __name__ == '__main__':
+    main()
