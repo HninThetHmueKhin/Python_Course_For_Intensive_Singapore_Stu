@@ -1,0 +1,5 @@
+number = int(input("Please enter the number:\t"))
+if((number%2) == 0):
+    print(f"Your input number is {number}. This is the Even number")
+else:
+    print(f"Your input number is {number}. This is the Odd number")
