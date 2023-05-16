@@ -18,7 +18,7 @@ def selectionSort(array,size):
         array[i],array[minimum_index]  = array[minimum_index],array[i]
 
 if __name__ == '__main__':
-    data = [20,12,10,15,2]
+    data = [20,10,2,13]
     size = len(data)
     selectionSort(data,size)
     print("Sorted array in ascending order : ",data)
