@@ -7,6 +7,6 @@ def current_path():
 if __name__ == '__main__':
     current_path()
 
-    os.chdir("../")
+    os.chdir("../../")
 
     current_path()
