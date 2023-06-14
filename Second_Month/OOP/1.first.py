@@ -6,8 +6,10 @@ class Person:
    def __init__(self,name):#one parameter constructor
        print(name)
 
-   def __init__(self,name,age):#two parameter constructor
-       print(name,age)
+   # def __init__(self,name,age):#two parameter constructor
+   #     print(name,age)
 
 if __name__ == '__main__':
-    obj = Person("KZT",21)
+    obj = Person("UU")
+
+    obj2 = Person("TT")
