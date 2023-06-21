@@ -19,6 +19,8 @@ JSon Decoding(Deserialization)
 json.loads(): Convert Json string to python object
 json.load(): Read a Json file and convert it to a Python object
 """
+#https://docs.python.org/3/library/json.html
+#https://jsonlint.com/
 import json
 myJson = """
 {
